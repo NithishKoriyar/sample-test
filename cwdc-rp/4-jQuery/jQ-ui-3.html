@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithish</title>
+   
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+    <style>
+        
+        #box1 {
+                width: 150px;
+            height: 150px; 
+            background-color: rgb(193, 176, 176);
+            border: 5px solid rgb(0, 0, 0);
+            margin-top: 10px;
+              
+             }
+             #box2{
+                width: 150px;
+            height: 150px; 
+            background-color: rgb(193, 176, 176);
+            border: 5px solid rgb(0, 0, 0);
+            margin-top: 10px;
+              
+             }
+  
+  
+
+    </style>
+</head>
+    <div id="draggable">
+    hey
+    </div>
+    <div id="draggable2">
+        hey
+        </div>
+
+    <div style="width: 400px; height: 400px; background-color: red;">
+        <p style="width: 100px; height: 100px; background-color: rgb(0, 8, 255); color: aliceblue;">1</p></div>
+       
+        <div id="box1">
+        Should sync to DOWN
+        </div>
+        <div id="box2">
+            its sync'ing
+            </div>
+
+<body>
+
+    <script type="text/javascript">
+      $( "#draggable" ).draggable({axis:"x"});
+      $( "#draggable2" ).draggable({axis:"y"});
+      $( "p" ).draggable({containment:"parent"});
+
+
+      $( "#box1" ).resizable({
+        grid:50,
+        alsoResize:"#box2",function()
+       
+    });
+
+    $( "#box2" ).resizable({alsoResize:"#box1",
+    resize:function(event,ui){
+            if($("#box1").width() >1000);
+            alert("okay")
+        }
+
+});
+    
+
+      
+    </script>
+</body>
+
+</html>

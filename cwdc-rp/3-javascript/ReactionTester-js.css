@@ -1,0 +1,18 @@
+
+        body{
+            font-family:sans-serif;
+            background-image: linear-gradient(red,blue);
+            height: 690px;color: aliceblue;
+            
+        }
+        #shape {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(8, 132, 255);
+            display: none;
+            position: relative;
+       }
+       .bold{
+        font-weight: bold;
+       }
+   

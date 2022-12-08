@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithish</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #circle{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(0, 255, 38);
+            border-radius: 50%;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <p >this text to be changed</p>
+    
+    
+    <script type="text/javascript">
+
+        $("#circle").click(function(){
+             $("p").html("THE TEXT HAS BEEN CHANGED")
+            
+        });
+        
+      
+    </script>
+</body>
+
+</html>

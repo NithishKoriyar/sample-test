@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithish</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 255, 38);
+            border-radius: 50%;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 10px;
+            display: inline-block;
+        }
+        #hdntxt{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <h1>the text go'na change</h1>
+    <input type="button" value="click here" id="btn">
+    <h2 id="hdntxt">THIS TEXT STILL EXIST</h2>
+    <input type="button" value="SHOW" id="btnn">
+
+    <h2 id="txt">Toggle is STILL EXIST</h2>
+    <input type="button" value="Toggle HERE" id="tbtn">
+    
+
+
+    <script type="text/javascript">
+
+
+        // $("div").click(function () {
+        //     $(this).fadeOut(1000);
+        //     $(this).fadeIn(1000,"linear");
+        // });
+
+        // $("div").click(function () {
+        //     $(this).fadeOut(5000);
+        //     $(this).fadeIn(5000,"swing");
+        // });
+        
+        // $("div").click(function () {
+        //     $(this).hide(5000);
+           
+        // });
+
+        // $("div").click(function () {
+        
+        //     $(this).show(5000);
+        // });
+
+         $("div").click(function () {
+            $(this).fadeOut("slow",function(){
+                alert("he hey boi");
+            });
+            
+        });
+
+        $("#btn").click(function () {
+            $("h1").fadeOut("slow");
+            
+        });
+
+        $("#btnn").click(function () {
+            $("#hdntxt").fadeIn(5000);
+            
+        });
+
+        $("#tbtn").click(function () {
+            if($("#txt").css("display") == "none"){
+                $("#txt").fadeIn();
+            }else{
+                $("#txt").fadeOut(); 
+            }
+            });
+
+        
+        
+       
+        
+       
+
+
+    </script>
+</body>
+
+</html>

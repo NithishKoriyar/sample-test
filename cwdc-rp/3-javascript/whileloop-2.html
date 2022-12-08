@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whileloop</title>
+</head>
+<body>
+   <p>How many finger your holding up</p>
+        <!-- <p><input type="text" id="txt"> -->
+            <select id="txt">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <input type="button" id="btn" value="Guess">
+           
+            
+        </p>
+    
+        <script type="text/javascript">
+            document.getElementById("btn").onclick = function(){
+                var text =document.getElementById("txt").value;
+                
+                var gotIt = false;
+               
+
+                var npOfGuess = 1;
+                while(gotIt == false){
+                    var guess=Math.random();
+                    document.write(guess,"<br>");
+                    
+                    guess = guess * 6;
+                    guess = Math.floor(guess);
+                    if(guess == text){
+                        gotIt = true;
+                        document.write("<hr>");
+                        document.write("Got it was a "+ guess + " It took me "+ npOfGuess +" guessed ")  
+                    }
+                    else{
+                        npOfGuess++;
+                    }
+                    
+                    
+                   
+                }
+            }
+
+        </script>
+
+    
+</body>
+</html>
