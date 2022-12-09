@@ -50,7 +50,7 @@ echo var_dump($Z);
 
 // case-insensitive constant name
 define("GREETING", "Welcome to W3Schools.com!", false);
-echo greeting;
+echo 'greeting';
 
 ?>
 
